@@ -1,6 +1,6 @@
-const FRICTION = 0.8;
+const FRICTION = 0.98;
 const COLOR_SPEED = 0.12;
-const MOVE_SPEED = 0.7;
+const MOVE_SPEED = 0.88;
 
 export class Particle {
   constructor(pos, texture) {
