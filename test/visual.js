@@ -36,16 +36,17 @@ export class Visual {
   animate() {
     const item = this.particle;
 
-    const dx = this.mouse.x - item.x;
-    const dy = this.mouse.y - item.y;
+    const dx = item.x - this.mouse.x;
+    const dy = item.y - this.mouse.y;
     const dist = Math.sqrt(dx * dx + dy * dy);
 
     const minDist = item.radius + this.mouse.radius;
 
     if (dist < minDist) {
       const angle = Math.atan2(dy, dx);
-      const tx = item.x + Math.cos(angle) * minDist;
-      const ty = item.y + Math.sin(angle) * minDist;
+      console.log(dx, dy, angle);
+      const tx = item.x - Math.cos(angle) * minDist;
+      const ty = item.y - Math.sin(angle) * minDist;
 
       const ax = this.mouse.x - tx;
       const ay = this.mouse.y - ty;
