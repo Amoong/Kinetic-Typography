@@ -24,7 +24,7 @@ export class Visual {
       stage.removeChild(this.container);
     }
 
-    this.pos = this.text.setTextRange("Streami", 1, stageWidth, stageHeight);
+    this.pos = this.text.setTextRange("Amoong", 1, stageWidth, stageHeight);
     this.container = new PIXI.ParticleContainer(this.pos.length, {
       vertices: false,
       position: true,
